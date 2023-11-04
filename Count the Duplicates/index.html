@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      Write a function that takes a string and returns the count of unique
+      characters that appear more than once in the string. For example, for the
+      input "hello", the function should return 2 (because the characters 'l'
+      and 'o' appear more than once).
+    </h1>
+    <script>
+      let unic = [];
+      let input = prompt("Please enter a string");
+
+      for (let i = 0; i < input.length; i++) {
+        let isUnique = true;
+
+        for (let j = 0; j < unic.length; j++) {
+          if (input[i] === unic[j]) {
+            isUnique = false;
+            break;
+          }
+        }
+
+        if (isUnique) {
+          unic.push(input[i]);
+        }
+      }
+
+      console.log(unic);
+    </script>
+  </body>
+</html>
